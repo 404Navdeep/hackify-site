@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en" data-theme="tangerine">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Hackify — rewrite Spotify, get paid in Spotify</title>
+<meta name="description" content="Make a project for Spicetify Marketplace. Get Spotify premuim for ur phone! A Hack Club YSWS. " />
+<meta name="theme-color" content="#F6F0E4" />
+<meta property="og:title" content="Hackify — Make a project for Spicetify Marketplace. Get Spotify premuim" />
+<meta property="og:description" content="Make a project for Spicetify Marketplace. Get Spotify premuim for ur phone! A Hack Club YSWS." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317141C'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%23FF4A3D' stroke-width='5'/%3E%3Cpath d='M27 23l17 9-17 9z' fill='%23FFC93D'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Caveat:wght@500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" />
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<header class="topbar">
+  <a class="wordmark" href="#top" aria-label="Hackify, home">
+    <svg class="wordmark__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+      <circle cx="20" cy="20" r="15.5" fill="none" stroke="currentColor" stroke-width="3.4"/>
+      <circle cx="20" cy="20" r="3.2" fill="currentColor"/>
+      <path class="wordmark__tri" d="M16.5 13.2 28 20l-11.5 6.8z"/>
+    </svg>
+    <span class="wordmark__text">hackify</span>
+  </a>
+
+  <nav class="topnav" aria-label="Sections">
+    <a href="#spicetify">spicetify</a>
+    <a href="#build">build</a>
+    <a href="#exchange">the exchange</a>
+    <a href="#howitworks">how</a>
+    <a href="#faq">faq</a>
+  </nav>
+
+  <div class="topbar__right">
+    <button class="recolor" id="recolor" type="button" aria-label="Recolour the site — currently Tangerine">
+      <span class="recolor__swatches" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="recolor__label" id="recolorLabel">tangerine</span>
+    </button>
+    <a class="btn btn--sm" href="https://hackclub.com/slack/" target="_blank" rel="noopener">join&nbsp;#hackify</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section class="hero" id="top" data-track="hackify" data-dur="0:44">
+  <div class="hero__grid">
+
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>a hack club ysws · you ship, we ship</p>
+
+      <h1 class="hero__h1">
+        <span class="line">Rewrite</span>
+        <span class="line line--alt">Spotify.</span>
+        <span class="line">Get paid</span>
+        <span class="line line--alt">in Spotify.</span>
+      </h1>
+
+      <div class="stamp" role="text" aria-label="Two hours of building equals one month of Spotify Premium, and it stacks.">
+        <span class="stamp__a">2 hrs</span>
+        <svg class="stamp__arrow" viewBox="0 0 46 20" aria-hidden="true"><path d="M1 10.5c8-1 20-2.2 40-1.6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M33 3.5 43 9.4 33.6 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="stamp__b">1 month premium</span>
+        <span class="stamp__x">× stacks</span>
+      </div>
+
+      <p class="hero__lede">
+        The Spotify desktop app is a website in a trenchcoat. <strong>Spicetify</strong> lets you
+        pry it open and load your own CSS and JavaScript into it — themes, extensions, whole
+        custom pages. Build something. Log the hours. Trade them for listening time.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--big" href="#howitworks">Start hacking<span class="btn__glyph" aria-hidden="true">▸</span></a>
+        <a class="btn btn--ghost btn--big" href="#spicetify">wait, what's Spicetify?</a>
+      </div>
+
+      <p class="hero__fine">
+        Free. Run by <a href="https://hackclub.com/" target="_blank" rel="noopener">Hack&nbsp;Club</a>.
+        Not affiliated with Spotify — we just really like taking their app apart.
+      </p>
+    </div>
+
+    <div class="hero__stage">
+      <div class="skinwrap">
+        <div class="hero__annotate hero__annotate--1" aria-hidden="true">
+          <span class="scrawl">all of this is just CSS</span>
+          <svg class="arrow arrow--dl" viewBox="0 0 74 58"><path d="M68 5C60 30 44 44 12 50" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M26 40 9 51 25 56" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="hero__annotate hero__annotate--2" aria-hidden="true">
+          <span class="scrawl">your JS runs<br>down here too</span>
+          <svg class="arrow arrow--ur" viewBox="0 0 80 52"><path d="M5 46C26 42 52 30 74 9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M57 5 76 7 71 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="skin" id="skin" data-skin="papercut" role="img"
+             aria-label="Mock-up of the Spotify desktop app restyled with Spicetify, cycling through four community themes: Papercut, Nocturne, Bubblegum and Green Screen.">
+          <div class="skin__chrome">
+            <span class="tl tl--1"></span><span class="tl tl--2"></span><span class="tl tl--3"></span>
+            <span class="skin__title" id="skinTitle">Spotify — patched by you</span>
+          </div>
+          <div class="skin__body">
+            <aside class="skin__side">
+              <div class="skin__brand"><i></i><i></i></div>
+              <ul class="skin__nav">
+                <li><s></s>Home</li>
+                <li><s></s>Search</li>
+                <li><s></s>Your Library</li>
+                <li class="skin__new"><s></s>Your Hack<em>new</em></li>
+              </ul>
+              <div class="skin__crate">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </aside>
+            <div class="skin__main">
+              <div class="skin__hd">
+                <div class="skin__art"><span class="skin__ring"></span></div>
+                <div class="skin__hdtext">
+                  <b class="skin__kicker">theme</b>
+                  <strong class="skin__name" id="skinName">papercut</strong>
+                  <span class="skin__meta">user.css · 214 lines · you wrote this</span>
+                </div>
+              </div>
+              <ul class="skin__rows">
+                <li><i>1</i><u style="--w:72%"></u><em>3:41</em></li>
+                <li><i>2</i><u style="--w:54%"></u><em>2:12</em></li>
+                <li class="on"><i>▸</i><u style="--w:88%"></u><em>4:05</em></li>
+                <li><i>4</i><u style="--w:41%"></u><em>1:58</em></li>
+                <li><i>5</i><u style="--w:66%"></u><em>3:07</em></li>
+              </ul>
+            </div>
+          </div>
+          <div class="skin__player">
+            <span class="skin__part"></span>
+            <span class="skin__ctrl">◂◂</span><span class="skin__ctrl skin__ctrl--play">▸</span><span class="skin__ctrl">▸▸</span>
+            <span class="skin__seek"><b></b></span>
+            <span class="skin__wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skinpicker">
+        <span class="skinpicker__label">try a theme:</span>
+        <div class="skinpicker__row" role="group" aria-label="Preview a theme on the mock-up">
+          <button type="button" data-skin-btn="papercut" class="chip is-on">Papercut</button>
+          <button type="button" data-skin-btn="nocturne" class="chip">Nocturne</button>
+          <button type="button" data-skin-btn="bubblegum" class="chip">Bubblegum</button>
+          <button type="button" data-skin-btn="greenscreen" class="chip">Green&nbsp;Screen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>make a theme</span><b>◆</b><span>break the player</span><b>◆</b><span>add a tab</span><b>◆</b><span>2 hours = 1 month</span><b>◆</b><span>it stacks</span><b>◆</b><span>ship it</span><b>◆</b>
+      <span>make a theme</span><b>◆</b><span>break the player</span><b>◆</b><span>add a tab</span><b>◆</b><span>2 hours = 1 month</span><b>◆</b><span>it stacks</span><b>◆</b><span>ship it</span><b>◆</b>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ SPICETIFY ══════════════════════════ -->
+<section class="sec sec--spice" id="spicetify" data-track="what spicetify is" data-dur="1:10">
+  <div class="wrap">
+    <p class="kicker"><span>01</span> the tool</p>
+    <h2 class="h2 h2--wide">Your music player is a<br class="br-d"> website wearing a trenchcoat.</h2>
+
+    <div class="spice">
+      <div class="spice__prose">
+        <p class="lead">
+          Spotify's desktop client isn't some sealed native binary. It's HTML, CSS and JavaScript —
+          the exact same stuff a webpage is made of — just shipped in a box with the lid glued shut.
+        </p>
+        <p>
+          <a href="https://spicetify.app/" target="_blank" rel="noopener">Spicetify</a> is an
+          open-source command-line tool that unglues the lid. It patches the client so
+          <em>your</em> stylesheet and <em>your</em> script load right next to Spotify's, every single
+          time you hit play. No browser extension. No sketchy mod. Just your code, inside the app you
+          already use every day.
+        </p>
+        <p class="spice__punch">If you can style a <code>&lt;div&gt;</code>, you can restyle Spotify.</p>
+
+        <div class="term" role="img" aria-label="Terminal example: run 'spicetify apply' to load your theme, and 'spicetify restore' to undo everything.">
+          <div class="term__bar"><span></span><span></span><span></span><b>~/spicetify</b></div>
+          <pre class="term__body"><code><span class="p">$</span> spicetify config current_theme <span class="s">mine</span>
+<span class="p">$</span> spicetify apply
+<span class="c">✔ your css is now spotify's css</span>
+
+<span class="p">$</span> <span class="c2"># regret it?</span>
+<span class="p">$</span> spicetify restore
+<span class="c">✔ nothing was harmed</span></code></pre>
+        </div>
+        <p class="undo-note"><span class="scrawl scrawl--sm">one command puts it all back →</span></p>
+      </div>
+
+      <ol class="layers" aria-label="The four things Spicetify lets you add">
+        <li class="layer layer--1">
+          <span class="layer__tag">.css</span>
+          <h3>Themes</h3>
+          <p>A stylesheet plus a colour palette. Repaint every pixel — corners, fonts, spacing, the lot.</p>
+        </li>
+        <li class="layer layer--2">
+          <span class="layer__tag">.js</span>
+          <h3>Extensions</h3>
+          <p>A script with full access to the player. React to track changes, add buttons, automate things.</p>
+        </li>
+        <li class="layer layer--3">
+          <span class="layer__tag">/app</span>
+          <h3>Custom apps</h3>
+          <p>An entire page of your own, living in the sidebar next to Home and Search. Yes, really.</p>
+        </li>
+        <li class="layer layer--4">
+          <span class="layer__tag">~snip</span>
+          <h3>Snippets</h3>
+          <p>Three lines of CSS that fix the one thing that's annoyed you for four years. Counts too.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ WHAT YOU CAN BUILD ══════════════════════════ -->
+<section class="sec sec--build" id="build" data-track="what you can build" data-dur="1:52">
+  <div class="wrap">
+    <p class="kicker"><span>02</span> the brief</p>
+    <h2 class="h2">Make Spotify do something<br class="br-d"> it was never asked to do.</h2>
+    <p class="sub">Useful, ugly, beautiful, unhinged — all four are valid. Some starting points:</p>
+
+    <ul class="cards">
+      <li class="card card--a">
+        <span class="card__pin" aria-hidden="true"></span>
+        <span class="card__tag">theme</span>
+        <h3>Make it look like something else entirely</h3>
+        <p>Windows 98. A Game Boy. A newspaper. A terminal. A ransom note. Your bedroom wall.</p>
+      </li>
+      <li class="card card--b">
+        <span class="card__tag">extension</span>
+        <h3>Automate the thing you keep doing manually</h3>
+        <p>Auto-skip anything under 90 seconds. Ban a specific song forever. Save every track you replay twice.</p>
+      </li>
+      <li class="card card--c">
+        <span class="card__tag">custom app</span>
+        <h3>Add a page Spotify refuses to build</h3>
+        <p>Your listening stats, offline and private. A tag system. A "songs I liked in 2019" archaeology tool.</p>
+      </li>
+      <li class="card card--d">
+        <span class="card__tag">chaos</span>
+        <h3>Build something with no business existing</h3>
+        <p>Lyrics that fall like Tetris pieces. Album art that melts. A UI that gets progressively more cursed the longer you listen.</p>
+      </li>
+    </ul>
+
+    <div class="crate">
+      <p class="crate__label"><span class="scrawl">also totally fine:</span></p>
+      <div class="crate__row">
+        <span class="tagpill">a BPM readout in the player</span>
+        <span class="tagpill">spinning vinyl album art</span>
+        <span class="tagpill">keyboard shortcuts that make sense</span>
+        <span class="tagpill">a skip button shaped like your cat</span>
+        <span class="tagpill">queue you can drag around like a physics toy</span>
+        <span class="tagpill">an on-screen VU meter</span>
+        <span class="tagpill">dark mode, but darker</span>
+        <span class="tagpill">a theme that changes with the weather</span>
+        <span class="tagpill">a "how did this get in my library" detector</span>
+        <span class="tagpill">CRT scanlines over everything</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ JUKEBOX ══════════════════════════ -->
+<section class="sec sec--juke" id="jukebox" data-track="the idea jukebox" data-dur="2:38">
+  <div class="wrap wrap--narrow">
+    <p class="kicker kicker--c"><span>03</span> stuck?</p>
+    <h2 class="h2 h2--center">The Idea Jukebox</h2>
+    <p class="sub sub--center">Press the button. Take what it gives you. Ignore it and build something better.</p>
+
+    <div class="juke">
+      <div class="juke__screen">
+        <span class="juke__slot">idea no. <b id="jukeNum">017</b></span>
+        <p class="juke__idea" id="jukeIdea" aria-live="polite">A theme that slowly loses saturation the longer you stay on one album.</p>
+        <span class="juke__type" id="jukeType">theme</span>
+      </div>
+      <button class="juke__btn" id="jukeBtn" type="button">
+        <span class="juke__btncap">shuffle</span>
+      </button>
+      <div class="juke__legs" aria-hidden="true"><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ THE EXCHANGE ══════════════════════════ -->
+<section class="sec sec--xchg" id="exchange" data-track="the exchange" data-dur="3:26">
+  <div class="wrap">
+    <p class="kicker kicker--inv"><span>04</span> the deal</p>
+    <h2 class="h2 h2--inv">Your hours have an<br class="br-d"> exchange rate.</h2>
+    <p class="sub sub--inv">
+      Every <strong>2 hours</strong> you spend building becomes <strong>1 month of Spotify Premium</strong>.
+      There's no single tier to pick — it just keeps adding up. Drag the playhead.
+    </p>
+
+    <div class="xchg">
+      <div class="xchg__readout">
+        <div class="xchg__side">
+          <span class="xchg__lbl">hours built</span>
+          <span class="xchg__big" id="outHours">06</span>
+        </div>
+        <svg class="xchg__eq" viewBox="0 0 120 60" aria-hidden="true">
+          <path d="M6 22c30-4 62-3 100 4" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M96 16l18 10-17 11" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="34" y="52" class="xchg__eqtext">turns into</text>
+        </svg>
+        <div class="xchg__side xchg__side--out">
+          <span class="xchg__lbl">months of premium</span>
+          <span class="xchg__big xchg__big--hl" id="outMonths">03</span>
+        </div>
+      </div>
+
+      <div class="xchg__deck">
+        <label class="xchg__slidelabel" for="hours">Hours logged on your Hackify project</label>
+        <div class="slider">
+          <div class="slider__rail" aria-hidden="true">
+            <div class="slider__fill" id="sliderFill"></div>
+            <div class="slider__ticks" id="sliderTicks"></div>
+          </div>
+          <input class="slider__input" type="range" id="hours" min="0" max="24" step="2" value="6"
+                 aria-describedby="xchgHint" />
+        </div>
+        <div class="xchg__scale" aria-hidden="true">
+          <span>0h</span><span>6h</span><span>12h</span><span>18h</span><span>24h</span>
+        </div>
+        <p class="xchg__hint" id="xchgHint">Use the arrow keys, or drag it. Hours are counted with <a href="https://hackatime.hackclub.com/" target="_blank" rel="noopener">Hackatime</a> while you code.</p>
+      </div>
+
+      <div class="stack" id="stack" aria-hidden="true"></div>
+
+      <p class="stack__note" aria-live="polite" id="stackNote">
+        <span class="scrawl scrawl--light">…and 24 hours isn't the ceiling. it just ran out of room on the page.</span>
+      </p>
+    </div>
+  </div>
+  <div class="xchg__strip" aria-hidden="true">
+    <div class="xchg__striptrack">
+      <span>2h → 1 month</span><b>·</b><span>4h → 2 months</span><b>·</b><span>6h → 3 months</span><b>·</b><span>8h → 4 months</span><b>·</b><span>10h → 5 months</span><b>·</b><span>12h → 6 months</span><b>·</b>
+      <span>2h → 1 month</span><b>·</b><span>4h → 2 months</span><b>·</b><span>6h → 3 months</span><b>·</b><span>8h → 4 months</span><b>·</b><span>10h → 5 months</span><b>·</b><span>12h → 6 months</span><b>·</b>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ HOW IT WORKS ══════════════════════════ -->
+<section class="sec sec--how" id="howitworks" data-track="how it works" data-dur="4:31">
+  <div class="wrap">
+    <p class="kicker"><span>05</span> the run of show</p>
+    <h2 class="h2">Six tracks, then you're<br class="br-d"> listening for free.</h2>
+
+    <ol class="tracklist">
+      <li class="trk">
+        <span class="trk__no">01</span>
+        <div class="trk__body">
+          <h3>Say hi in #hackify</h3>
+          <p>On the <a href="https://hackclub.com/slack/" target="_blank" rel="noopener">Hack Club Slack</a>. Lurk, ask, steal ideas, post screenshots of things that are broken.</p>
+        </div>
+        <span class="trk__dur">0:02</span>
+      </li>
+      <li class="trk">
+        <span class="trk__no">02</span>
+        <div class="trk__body">
+          <h3>Install Spicetify</h3>
+          <p>One command on <a href="https://spicetify.app/docs/getting-started" target="_blank" rel="noopener">Windows, macOS or Linux</a>. Then <code>spicetify apply</code> and your Spotify is officially yours.</p>
+        </div>
+        <span class="trk__dur">0:09</span>
+      </li>
+      <li class="trk">
+        <span class="trk__no">03</span>
+        <div class="trk__body">
+          <h3>Start the clock</h3>
+          <p>Hook up <a href="https://hackatime.hackclub.com/" target="_blank" rel="noopener">Hackatime</a> in your editor. It counts your hours in the background so you don't have to remember to.</p>
+        </div>
+        <span class="trk__dur">0:04</span>
+      </li>
+      <li class="trk trk--wide">
+        <span class="trk__no">04</span>
+        <div class="trk__body">
+          <h3>Build the thing</h3>
+          <p>Theme, extension, custom app, or a pile of snippets that add up to something. Weird is welcome. Broken-but-interesting is welcome. This is the part that takes hours — which is exactly the point.</p>
+        </div>
+        <span class="trk__dur">2:00+</span>
+      </li>
+      <li class="trk">
+        <span class="trk__no">05</span>
+        <div class="trk__body">
+          <h3>Ship it</h3>
+          <p>Put the code somewhere public with a screenshot and instructions, so the next person can actually install it.</p>
+        </div>
+        <span class="trk__dur">0:15</span>
+      </li>
+      <li class="trk trk--last">
+        <span class="trk__no">06</span>
+        <div class="trk__body">
+          <h3>Get your months</h3>
+          <p>1 month of Spotify Premium for every 2 hours you put in. Then go back to track 04 and stack more.</p>
+        </div>
+        <span class="trk__dur">∞</span>
+      </li>
+    </ol>
+
+    <p class="loopnote">
+      <svg class="loop" viewBox="0 0 120 46" aria-hidden="true"><path d="M100 8c14 8 12 26-8 30-30 6-70 2-86-4-8-3-6-12 6-14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="6 6"/><path d="M22 14 8 20l12 8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="scrawl">the loop is the whole point</span>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════ FAQ ══════════════════════════ -->
+<section class="sec sec--faq" id="faq" data-track="liner notes / faq" data-dur="5:14">
+  <div class="wrap wrap--mid">
+    <p class="kicker"><span>06</span> liner notes</p>
+    <h2 class="h2">Questions you were<br class="br-d"> about to ask.</h2>
+
+    <div class="faq">
+      <details class="qa" open>
+        <summary><span>I've never touched Spicetify. Am I cooked?</span></summary>
+        <div class="qa__body"><p>No. If you've ever written CSS, you can make a decent theme in an afternoon — you're editing a stylesheet, that's it. The <a href="https://spicetify.app/docs/getting-started" target="_blank" rel="noopener">docs</a> are genuinely good, and #hackify is full of people who were also confused about 40 minutes ago.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span>Do I need Premium already to build this?</span></summary>
+        <div class="qa__body"><p>Nope. Spicetify runs on the free Spotify desktop client. Building your thing costs you nothing but time — and time is the currency here.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span>Does it really stack, or is there a secret cap?</span></summary>
+        <div class="qa__body"><p>It really stacks. 2 hours is 1 month. 10 hours is 5 months. 30 hours is 15 months. The maths does not get more complicated than dividing by two.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span>What actually counts as a Hackify project?</span></summary>
+        <div class="qa__body"><p>Anything that changes Spotify through Spicetify: a theme, an extension, a custom app, or a set of snippets that together do something real. If you're squinting at your idea wondering whether it counts, post it in #hackify and someone will tell you it does.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span>Am I going to permanently destroy my Spotify?</span></summary>
+        <div class="qa__body"><p><code>spicetify restore</code>. That's the whole answer. It puts the client back exactly how it was, and you can re-apply whenever you want. Break things freely.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span>Windows, Mac, or Linux?</span></summary>
+        <div class="qa__body"><p>All three. Spicetify supports the desktop client on every one of them. (The Microsoft Store build of Spotify is the one that sulks — grab the installer from spotify.com instead.)</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span>Is Spotify running this?</span></summary>
+        <div class="qa__body"><p>No. Hackify is a Hack Club YSWS. Spicetify is an independent open-source project made by the community. Spotify has nothing to do with either of us — we're just extremely fond of their app's DOM.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span>What's a YSWS? What's Hack Club?</span></summary>
+        <div class="qa__body"><p>YSWS stands for <em>You Ship, We Ship</em>: you make something real and send it in, we send something real back. <a href="https://hackclub.com/" target="_blank" rel="noopener">Hack Club</a> is a nonprofit and a network of 100,000+ teenage hackers who learn by building things that mostly work.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ CTA ══════════════════════════ -->
+<section class="sec sec--join" id="join" data-track="go on then" data-dur="6:00">
+  <div class="wrap wrap--narrow">
+    <div class="join">
+      <p class="join__eyebrow">open spotify. it's about to look different.</p>
+      <h2 class="join__h">Go break<br> your music player.</h2>
+      <div class="join__cta">
+        <a class="btn btn--big btn--solid" href="https://hackclub.com/slack/" target="_blank" rel="noopener">Join #hackify<span class="btn__glyph" aria-hidden="true">▸</span></a>
+        <a class="btn btn--big btn--ghost btn--ghost-inv" href="https://spicetify.app/docs/getting-started" target="_blank" rel="noopener">Install Spicetify</a>
+      </div>
+      <p class="join__rate"><b>2 hours</b> in the editor <span aria-hidden="true">→</span> <b>1 month</b> in your ears. Repeat as desired.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <span class="wordmark wordmark--foot">
+        <svg class="wordmark__mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <circle cx="20" cy="20" r="15.5" fill="none" stroke="currentColor" stroke-width="3.4"/>
+          <circle cx="20" cy="20" r="3.2" fill="currentColor"/>
+          <path class="wordmark__tri" d="M16.5 13.2 28 20l-11.5 6.8z"/>
+        </svg>
+        <span class="wordmark__text">hackify</span>
+      </span>
+      <p>A Hack Club YSWS about turning your music player into a project. Made by teenagers who thought the sidebar could be better.</p>
+    </div>
+    <nav class="foot__col" aria-label="Hackify links">
+      <h3>hackify</h3>
+      <a href="#spicetify">What's Spicetify</a>
+      <a href="#build">What to build</a>
+      <a href="#exchange">The exchange</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <nav class="foot__col" aria-label="External links">
+      <h3>elsewhere</h3>
+      <a href="https://hackclub.com/slack/" target="_blank" rel="noopener">Hack Club Slack</a>
+      <a href="https://spicetify.app/" target="_blank" rel="noopener">spicetify.app</a>
+      <a href="https://github.com/spicetify/spicetify-themes" target="_blank" rel="noopener">Theme gallery</a>
+      <a href="https://hackatime.hackclub.com/" target="_blank" rel="noopener">Hackatime</a>
+    </nav>
+  </div>
+  <div class="wrap foot__base">
+    <p>Made with ♥ and <code> Claude Opus 5 (2.8m tokens btw so RSVP)</code> at <a href="https://hackclub.com/" target="_blank" rel="noopener">Hack Club</a>, a 501(c)(3) nonprofit.</p>
+    <p class="foot__disc">Spotify is a trademark of Spotify AB. Hackify isn't affiliated with, endorsed by, with them.</p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════ PLAYER BAR ══════════════════════════ -->
+<div class="player" id="player">
+  <button class="player__seek" id="playerSeek" type="button" aria-label="Scrub through the page">
+    <span class="player__seekfill" id="seekFill"></span>
+    <span class="player__seekhead" id="seekHead"></span>
+  </button>
+
+  <div class="player__inner">
+    <div class="player__ctrls">
+      <button type="button" id="btnPrev" class="pbtn" aria-label="Previous section">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 4v12M17 4 8 10l9 6z"/></svg>
+      </button>
+      <button type="button" id="btnPlay" class="pbtn pbtn--play" aria-pressed="true" aria-label="Pause background motion">
+        <svg class="ic-pause" viewBox="0 0 20 20" aria-hidden="true"><rect x="5" y="4" width="3.6" height="12" rx="1"/><rect x="11.4" y="4" width="3.6" height="12" rx="1"/></svg>
+        <svg class="ic-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M6 3.6 17 10 6 16.4z"/></svg>
+      </button>
+      <button type="button" id="btnNext" class="pbtn" aria-label="Next section">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 4v12M3 4l9 6-9 6z"/></svg>
+      </button>
+    </div>
+
+    <div class="player__eq" aria-hidden="true" id="eq">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <div class="player__now">
+      <span class="player__label">now playing</span>
+      <span class="player__track" id="nowTrack">hackify</span>
+    </div>
+
+    <span class="player__time"><b id="tNow">0:00</b> / <span id="tAll">6:00</span></span>
+
+    <button type="button" id="btnShuffle" class="pbtn pbtn--shuffle" aria-label="Shuffle me a project idea">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h3.5L9 15h4M2 15h3.5L9 5h4"/><path d="M13.5 2.5 17 5l-3.5 2.5M13.5 12.5 17 15l-3.5 2.5"/></svg>
+    </button>
+  </div>
+</div>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

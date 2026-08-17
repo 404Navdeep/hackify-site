@@ -1,0 +1,17 @@
+{
+  "name": "hackify",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Hackify — Make a project for Spicetify Marketplace. Get Spotify premuim for ur phone spotify needs!",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
+}
